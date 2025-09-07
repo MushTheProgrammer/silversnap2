@@ -80,23 +80,27 @@ export default function Team() {
 				</div>
 
 				<div className="grid md:grid-cols-2 gap-12 items-center">
-					<div className="flex flex-col items-center md:items-start gap-8">
-            <div className="flex flex-col items-start gap-8"></div>
+					<div className="flex flex-col items-center md:items-start gap-8 text-center md:text-left">
 						{teamMembers.map((member) => (
 							<h3
 								key={member.name}
 								className={cn(
-									"text-5xl md:text-7xl font-bold font-headline cursor-pointer transition-colors duration-300",
+									"text-3xl sm:text-4xl md:text-5xl md:text-7xl font-bold font-headline cursor-pointer transition-colors duration-300 whitespace-nowrap overflow-hidden text-ellipsis max-w-[90vw] md:max-w-none",
 									selectedMember?.name === member.name ? 'bg-gradient-to-r from-[#211a1dff] via-[#6320eeff] to-[#f8f0fbff] bg-clip-text text-transparent' : 'text-foreground/50 hover:text-foreground/80'
 								)}
-								onMouseEnter={() => setSelectedMember(member)}
+								onClick={() => setSelectedMember(member)}
+								onMouseEnter={(e) => {
+									if (window.innerWidth >= 768) {
+										setSelectedMember(member);
+									}
+								}}
 							>
 								{member.name}
 							</h3>
 						))}
 					</div>
 
-					  <div className="relative w-[380px] h-[590px] mx-auto">
+					  <div className="relative w-full max-w-[380px] h-[590px] mx-auto flex justify-center items-center">
 						{teamMembers.map((member) => (
 							<div
 								key={member.name}
