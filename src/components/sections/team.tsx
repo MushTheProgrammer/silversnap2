@@ -9,7 +9,7 @@ import Link from 'next/link';
 export const teamMembers = [
 	{
 		name: "Dinal De Silva",
-		role: "Photographer",
+		role: "Photographer/ Videographer/ Editor",
 		bio: "A dedicated photographer transforming moments into timeless imagery. I specialize in crafting compelling visual stories that resonate with authenticity and emotion for every client.",
 		avatar: "/img/team/Dinal.jpg",
 		cardImage: "/img/team/Dinal.jpg",
@@ -23,7 +23,7 @@ export const teamMembers = [
 	},
 	{
 		name: "Sachitha Athukorala",
-		role: "Editor/Photographer ",
+		role: "Editor/ Photographer ",
 		bio: "A dual-threat visual professional mastering both the camera and the digital darkroom. I capture the moment and meticulously polish it to perfection for a flawless final product.",
 		avatar: "/img/team/Sachitha.jpg",
 		cardImage: "/img/team/Sachitha.jpg",
