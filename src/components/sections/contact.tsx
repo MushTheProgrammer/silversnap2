@@ -73,8 +73,8 @@ export default function Contact() {
             Have a question or want to book a session? Fill out the form below or visit us at one of our locations.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
-          <div className="flex flex-col gap-8">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+          <div className="flex flex-col gap-6 w-full max-w-md mx-auto md:max-w-none">
              <Card>
                 <CardHeader>
                 <CardTitle className="font-headline">Get in Touch</CardTitle>
@@ -113,13 +113,13 @@ export default function Contact() {
                 </CardContent>
             </Card>
           </div>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-6 w-full max-w-md mx-auto md:max-w-none">
             <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-2">
                     <MapPin className="h-6 w-6 text-primary" />
                     <h3 className="text-2xl font-bold font-headline">Our Locations</h3>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2 justify-center md:justify-start w-full">
                     {locations.map((location) => (
                         <Button
                             key={location.name}
@@ -136,7 +136,7 @@ export default function Contact() {
                     <a href="tel:+94774271422" className="text-muted-foreground hover:text-primary transition-colors">+94 774271422</a>
                 </div>
             </div>
-            <div className="aspect-video w-full">
+            <div className="aspect-video w-full min-h-[200px]">
                 <iframe
                     src={activeLocation.mapSrc}
                     width="100%"
