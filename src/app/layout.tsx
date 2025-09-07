@@ -2,7 +2,6 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Script from 'next/script';
-import SmokeCursor from '@/components/effects/smoke-cursor';
 
 export const metadata: Metadata = {
   title: 'SilverSnaps',
@@ -12,40 +11,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
       </head>
       <body className="font-body antialiased">
-      <SmokeCursor />
         {children}
         <Toaster />
-        <Script
-          id="block-inspect"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Disable right-click
-              document.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
-              });
-              // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-              document.addEventListener('keydown', function(e) {
-                if (
-                  e.key === 'F12' ||
-                  (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) ||
-                  (e.ctrlKey && e.key === 'U')
-                ) {
-                  e.preventDefault();
-                }
-              });
-            `,
-          }}
-        />
         <Script
           id="zapier-chatbot-loader"
           strategy="afterInteractive"
