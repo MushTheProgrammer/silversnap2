@@ -1,6 +1,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import SmokeCursor from "@/components/effects/smoke-cursor";
 import Script from 'next/script';
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
       </head>
       <body className="font-body antialiased">
+        <SmokeCursor />
         {children}
         <Toaster />
         <Script
