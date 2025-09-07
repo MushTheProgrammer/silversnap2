@@ -81,6 +81,7 @@ export default function Team() {
 
 				<div className="grid md:grid-cols-2 gap-12 items-center">
 					<div className="flex flex-col items-center md:items-start gap-8">
+            <div className="flex flex-col items-start gap-8"></div>
 						{teamMembers.map((member) => (
 							<h3
 								key={member.name}
