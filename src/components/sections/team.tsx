@@ -35,20 +35,20 @@ export const teamMembers = [
 			instagram: "#",
 		}
 	},
-	// {
-	// 	name: "Musharaf Mohamad",
-	// 	role: "Digital Asset Manager & Technical Lead",
-	// 	bio: "A technical lead architecting our online presence, building the robust systems that power our digital identity and ensure a seamless, impactful experience for our clients.",
-	// 	avatar: "/img/team/Musharaf.jpg",
-	// 	cardImage: "/img/team/Musharaf.jpg",
-	// 	initials: "MM",
-	// 	aiHint: "man glasses",
-	// 	socials: {
-	// 		linkedin: "#",
-	// 		facebook: "#",
-	// 		instagram: "#",
-	// 	}
-	// },
+	{
+		name: "Musharaf Mohamad",
+		role: "Digital Asset Manager & Technical Lead",
+		bio: "A technical lead architecting our online presence, building the robust systems that power our digital identity and ensure a seamless, impactful experience for our clients.",
+		avatar: "/img/team/Musharaf.jpg",
+		cardImage: "/img/team/Musharaf.jpg",
+		initials: "MM",
+		aiHint: "man glasses",
+		socials: {
+			linkedin: "#",
+			facebook: "#",
+			instagram: "#",
+		}
+	},
 ];
 
 type TeamMember = (typeof teamMembers)[0];
